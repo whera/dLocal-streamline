@@ -37,8 +37,8 @@ class Customer
     private $email;
 
     /**
-     * @var string
-     * @Annotation\Type("string")
+     * @var int
+     * @Annotation\Type("int")
      * @Annotation\SerializedName("x_cpf")
      */
     private $personalIdentification;
