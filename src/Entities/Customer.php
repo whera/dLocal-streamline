@@ -4,47 +4,61 @@ namespace WSW\dLocal\Entities;
 
 use DateTime;
 use WSW\Email\Email;
+use JMS\Serializer\Annotation;
 
 /**
  * Class Customer
  *
+ * @Annotation\AccessType("public_method")
  * @package WSW\dLocal\Entities
  * @author Ronaldo Matos Rodrigues <ronaldo@whera.com.br>
  */
 class Customer
 {
     /**
-     * @var int
+     * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_iduser")
      */
     private $id;
 
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_name")
      */
     private $name;
 
     /**
      * @var Email
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_email")
      */
     private $email;
 
     /**
-     * @var int
+     * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_cpf")
      */
     private $personalIdentification;
 
     /**
      * @var DateTime
+     * @Annotation\Type("DateTime<'Ymd'>")
+     * @Annotation\SerializedName("x_bdate")
      */
     private $dateBirth;
 
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_mobile")
      */
     private $phone;
 
     /**
-     * @return int
+     * @return string
      */
     public function getId()
     {
@@ -52,7 +66,7 @@ class Customer
     }
 
     /**
-     * @param int $id
+     * @param string $id
      *
      * @return $this
      */

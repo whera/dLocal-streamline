@@ -2,9 +2,12 @@
 
 namespace WSW\dLocal\Entities;
 
+use JMS\Serializer\Annotation;
+
 /**
  * Class Address
  *
+ * @Annotation\AccessType("public_method")
  * @package WSW\dLocal\Entities
  * @author Ronaldo Matos Rodrigues <ronaldo@whera.com.br>
  */
@@ -12,26 +15,36 @@ class Address
 {
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_address")
      */
     private $address;
 
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_city")
      */
     private $city;
 
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_state")
      */
     private $state;
 
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_country")
      */
     private $country;
 
     /**
      * @var string
+     * @Annotation\Type("string")
+     * @Annotation\SerializedName("x_zip")
      */
     private $zipCode;
 
