@@ -15,7 +15,7 @@
     "wsw/money": "^1.0",
     "wsw/email": "^1.1",
     "guzzlehttp/guzzle": "^6.3",
-    "jms/serializer":"~1.1"
+    "jms/serializer":"^1.8"
   },
   "require-dev": {
     "rdehnhardt/var-dumper": "^1.1",
